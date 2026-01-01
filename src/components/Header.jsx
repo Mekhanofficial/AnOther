@@ -431,7 +431,7 @@ export default function HeaderPage() {
       )}
 
       <header
-        className={`bg-zinc-950 text-white sticky top-0 z-20 transition-all duration-300 ${
+        className={`bg-zinc-950 text-white 22 top-0 z-20 transition-all duration-300 ${
           scrolled ? "shadow-xl py-2" : "py-4"
         }`}
       >

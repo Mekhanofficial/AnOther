@@ -345,11 +345,10 @@ export default function StYle() {
             />
 
             <div
-              className={`shop-sidebar w-full p-6 overflow-y-auto transition-all duration-300 md:sticky top-0 bottom-0 z-40 
-      }`}
+              className="shop-sidebar w-full p-6 overflow-y-auto transition-all duration-300 md:sticky top-2 bottom-0 flex justify-center"
             >
               <img
-                className="h-full w-full object-cover "
+                className="w-full h-auto object-cover mx-auto"
                 src={td31}
                 alt="Sticky"
               />
