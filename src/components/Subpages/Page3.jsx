@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+﻿import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -8,11 +8,12 @@ import {
 import { faHeart, faMessage, faShare } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-import InstagramProfile from "../InstagramProfile";
-import ProfileCard from "../ProfileCard";
-import SocialIcons from "../SocialIcons";
-import TrendingPostsSidebar from "../TrendingPostSidebar";
-import SliderCard from "../SliderCard";
+import InstagramProfile from "../shared/InstagramProfile";
+import ProfileCard from "../shared/ProfileCard";
+import SocialIcons from "../shared/SocialIcons";
+import TrendingPostsSidebar from "../shared/TrendingPostSidebar";
+import SliderCard from "../shared/SliderCard";
+import CommentFormSection from "../shared/CommentFormSection";
 import { Link } from "react-router-dom";
 import td1 from "../../../public/images/td1.jpg";
 import td2 from "../../../public/images/td2.jpg";
@@ -234,21 +235,21 @@ export default function PageThree() {
                 <h2 className="text-xl font-bold text-white">217</h2>
                 <FontAwesomeIcon
                   icon={faFacebook}
-                  className="text-blue-500 text-xl mt-2 group-hover:text-blue-400 transition-colors"
+                  className="text-brand-blue text-xl mt-2 group-hover:text-brand-blueSoft transition-colors"
                 />
               </div>
               <div className="text-center group">
                 <h2 className="text-xl font-bold text-white">477</h2>
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  className="text-blue-400 text-xl mt-2 group-hover:text-blue-300 transition-colors"
+                  className="text-brand-blueSoft text-xl mt-2 group-hover:text-brand-blueLight transition-colors"
                 />
               </div>
               <div className="text-center group">
                 <h2 className="text-xl font-bold text-white">216</h2>
                 <FontAwesomeIcon
                   icon={faPinterest}
-                  className="text-red-500 text-xl mt-2 group-hover:text-red-400 transition-colors"
+                  className="text-brand-danger text-xl mt-2 group-hover:text-brand-dangerSoft transition-colors"
                 />
               </div>
             </div>
@@ -365,7 +366,7 @@ export default function PageThree() {
                       <button className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded transition-colors">
                         <FontAwesomeIcon
                           icon={faFacebook}
-                          className="text-blue-500"
+                          className="text-brand-blue"
                         />
                         <span className="text-xs">
                           SHARE <span className="font-bold">216</span>
@@ -374,7 +375,7 @@ export default function PageThree() {
                       <button className="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded transition-colors">
                         <FontAwesomeIcon
                           icon={faPinterest}
-                          className="text-red-500"
+                          className="text-brand-danger"
                         />
                         <span className="text-xs">
                           PIN IT <span className="font-bold">216</span>
@@ -383,7 +384,7 @@ export default function PageThree() {
                       <button className="bg-zinc-800 hover:bg-zinc-700 p-2 rounded transition-colors">
                         <FontAwesomeIcon
                           icon={faTwitter}
-                          className="text-blue-400"
+                          className="text-brand-blueSoft"
                         />
                       </button>
                       <button className="bg-zinc-800 hover:bg-zinc-700 p-2 rounded transition-colors">
@@ -448,7 +449,7 @@ export default function PageThree() {
 
                   <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
                     <input
-                      className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
                       type="email"
                       placeholder="Enter your email"
                     />
@@ -534,117 +535,11 @@ export default function PageThree() {
               </div>
               <hr className="relative top-7 border-t-1 mb-16 border-zinc-800" />
 
-              <div className="py-12 sm:px-6 bg-zinc-800 text-white text-left ">
-                <div className="max-w-4xl mx-auto md:mx-24">
-                  <h1 className="text-4xl font-bold text-left">
-                    Leave a Reply
-                  </h1>
-                  <h3 className="text-md font-semibold text-left text-gray-500 my-4">
-                    Your email address will not be published. Required fields
-                    are marked <span className="text-red-700">*</span>
-                  </h3>
-
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Message Field */}
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-semibold text-left text-gray-700"
-                      >
-                        Comment <span className="text-red-700">*</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows="4"
-                        className="w-full p-3 mt-2 bg-zinc-800 border border-gray-600 rounded-md"
-                        required
-                      ></textarea>
-                    </div>
-                    {/* Name and Email on the same line */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-6">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-lg font-semibold"
-                        >
-                          Name <span className="text-red-700">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full p-3 mt-2 bg-zinc-800 border border-gray-600 rounded-md"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-lg font-semibold"
-                        >
-                          Email <span className="text-red-700">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="w-full p-3 mt-2 bg-zinc-800 border border-gray-600 rounded-md"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="subject"
-                          className="block text-lg font-semibold"
-                        >
-                          Website <span className="text-red-700">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          className="w-full p-3 mt-2 bg-white border border-gray-600 rounded-md"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    {/* Newsletter Checkbox */}
-                    <div className="flex items-center">
-                      <input
-                        type="checkbox"
-                        id="newsletter"
-                        name="newsletter"
-                        checked={formData.newsletter}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      <label htmlFor="newsletter" className="text-lg">
-                        Send me your Newsletter
-                      </label>
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="text-left">
-                      <button
-                        type="submit"
-                        className="bg-zinc-700 text-white font-semibold py-3 px-6 rounded-md mt-4 hover:bg-zinc-600"
-                      >
-                        POST COMMENT
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <CommentFormSection
+                formData={formData}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+              />
             </div>
           </div>
 
@@ -721,3 +616,6 @@ export default function PageThree() {
     </div>
   );
 }
+
+
+

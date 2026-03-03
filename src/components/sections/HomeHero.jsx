@@ -1,49 +1,49 @@
-import td1 from "../../public/images/td1.jpg";
-import td2 from "../../public/images/td2.jpg";
-import td3 from "../../public/images/td3.jpg";
-import td4 from "../../public/images/td4.jpg";
-import td5 from "../../public/images/td5.jpg";
-import td6 from "../../public/images/td6.jpg";
-import td7 from "../../public/images/td7.jpg";
-import td8 from "../../public/images/td8.jpg";
-import td9 from "../../public/images/td9.jpg";
-import td10 from "../../public/images/td10.jpg";
-import td11 from "../../public/images/td11.jpg";
-import td12 from "../../public/images/td12.jpg";
-import td13 from "../../public/images/td13.jpg";
-import td14 from "../../public/images/td14.jpg";
-import td15 from "../../public/images/td15.jpg";
-import td16 from "../../public/images/td16.jpg";
-import td17 from "../../public/images/td17.jpg";
-import td18 from "../../public/images/td18.jpg";
-import td19 from "../../public/images/td19.jpg";
-import td20 from "../../public/images/td20.jpg";
-import td21 from "../../public/images/td21.jpg";
-import td22 from "../../public/images/td22.jpg";
-import td23 from "../../public/images/td23.jpg";
-import td24 from "../../public/images/td24.jpg";
-import td25 from "../../public/images/td25.jpg";
-import td26 from "../../public/images/td26.jpg";
-import td27 from "../../public/images/td27.jpg";
-import td28 from "../../public/images/td28.jpg";
-import td29 from "../../public/images/td29.jpg";
-import td30 from "../../public/images/td30.jpg";
-import td31 from "../../public/images/td31.jpg";
-import td32 from "../../public/images/td32.jpg";
-import td33 from "../../public/images/td33.jpg";
-import td34 from "../../public/images/td34.jpg";
-import ballerina from "../../public/images/ballerina.jpg";
+﻿import td1 from "../../../public/images/td1.jpg";
+import td2 from "../../../public/images/td2.jpg";
+import td3 from "../../../public/images/td3.jpg";
+import td4 from "../../../public/images/td4.jpg";
+import td5 from "../../../public/images/td5.jpg";
+import td6 from "../../../public/images/td6.jpg";
+import td7 from "../../../public/images/td7.jpg";
+import td8 from "../../../public/images/td8.jpg";
+import td9 from "../../../public/images/td9.jpg";
+import td10 from "../../../public/images/td10.jpg";
+import td11 from "../../../public/images/td11.jpg";
+import td12 from "../../../public/images/td12.jpg";
+import td13 from "../../../public/images/td13.jpg";
+import td14 from "../../../public/images/td14.jpg";
+import td15 from "../../../public/images/td15.jpg";
+import td16 from "../../../public/images/td16.jpg";
+import td17 from "../../../public/images/td17.jpg";
+import td18 from "../../../public/images/td18.jpg";
+import td19 from "../../../public/images/td19.jpg";
+import td20 from "../../../public/images/td20.jpg";
+import td21 from "../../../public/images/td21.jpg";
+import td22 from "../../../public/images/td22.jpg";
+import td23 from "../../../public/images/td23.jpg";
+import td24 from "../../../public/images/td24.jpg";
+import td25 from "../../../public/images/td25.jpg";
+import td26 from "../../../public/images/td26.jpg";
+import td27 from "../../../public/images/td27.jpg";
+import td28 from "../../../public/images/td28.jpg";
+import td29 from "../../../public/images/td29.jpg";
+import td30 from "../../../public/images/td30.jpg";
+import td31 from "../../../public/images/td31.jpg";
+import td32 from "../../../public/images/td32.jpg";
+import td33 from "../../../public/images/td33.jpg";
+import td34 from "../../../public/images/td34.jpg";
+import ballerina from "../../../public/images/ballerina.jpg";
 import Slider from "react-slick";
-import TrendingPosts from "./TrendingPost";
-import ArticleCard from "./ArticleCard";
-import SocialShare from "./SocialShare";
-import InstagramGrid from "./InstagramGrid";
-import FeaturedImageCard from "./FeaturedImageCard";
-import InstagramProfile from "./InstagramProfile";
-import ProfileCard from "./ProfileCard";
-import SocialIcons from "./SocialIcons";
-import TrendingPostsSidebar from "./TrendingPostSidebar";
-import SliderCard from "./SliderCard";
+import TrendingPosts from "../shared/TrendingPost";
+import ArticleCard from "../shared/ArticleCard";
+import SocialShare from "../shared/SocialShare";
+import InstagramGrid from "../shared/InstagramGrid";
+import FeaturedImageCard from "../shared/FeaturedImageCard";
+import InstagramProfile from "../shared/InstagramProfile";
+import ProfileCard from "../shared/ProfileCard";
+import SocialIcons from "../shared/SocialIcons";
+import TrendingPostsSidebar from "../shared/TrendingPostSidebar";
+import SliderCard from "../shared/SliderCard";
 import { Link } from "react-router-dom";
 
 export default function HomeHeroPage() {
@@ -178,7 +178,7 @@ export default function HomeHeroPage() {
   return (
     <>
       <section className="bg-zinc-950 ">
-        <div className="relative top-20 p-10">
+        <div className="section-shell pt-24 pb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -236,7 +236,7 @@ export default function HomeHeroPage() {
             ))}
           </div>
         </div>
-        <div className="mt-40 text-center p-10">
+        <div className="mt-24 text-center px-4 sm:px-8 lg:px-10 pb-10">
           <h2 className="font-bold text-white mb-10">TRENDING POSTS</h2>
 
           {/* Slider Component */}
@@ -312,7 +312,7 @@ export default function HomeHeroPage() {
         </div>
 
         <section>
-          <div className="flex flex-col lg:flex-row mx-4 md:mx-10">
+          <div className="page-columns section-shell py-10 md:py-12">
             {/* Left Content Section */}
             <div className="flex-1">
               <Link to={"/page7"}>
@@ -514,12 +514,12 @@ export default function HomeHeroPage() {
             </div>
 
             {/* Right Sidebar */}
-            <div className="w-full lg:w-[30%] mt-10 lg:mt-0 lg:ml-5 lg:pl-5 space-y-8">
+            <div className="w-full lg:w-[30%] mt-10 lg:mt-0 lg:ml-8 lg:pl-6 space-y-10">
               <div className="hidden lg:block">
                 <Slider {...settingsTwo}>
                   {productsTwo.map((product) => (
-                    <Link to={"/travel"}>
-                      <SliderCard key={product.id} product={product} />
+                    <Link key={product.id} to={"/travel"}>
+                      <SliderCard product={product} />
                     </Link>
                   ))}
                 </Slider>
@@ -576,16 +576,12 @@ export default function HomeHeroPage() {
                 />
               </Link>
 
-              <div
-                className="shop-sidebar w-full p-6 overflow-y-auto transition-all duration-300 md:sticky top-2 bottom-0 flex justify-center"
-              >
-                <Link to={"/page9"} className="w-full">
-                  <img
-                    className="w-full h-auto object-cover mx-auto"
-                    src={td31}
-                    alt="Sticky"
-                  />
-                </Link>
+              <div className="sticky top-0 z-10">
+                <div className="w-full p-3">
+                  <Link to={"/page9"} className="block w-full">
+                    <img className="w-full object-cover" src={td31} alt="Sticky content" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -602,7 +598,7 @@ export default function HomeHeroPage() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
               <input
-                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
                 type="email"
                 placeholder="Enter your email"
               />
@@ -647,3 +643,5 @@ export default function HomeHeroPage() {
     </>
   );
 }
+
+

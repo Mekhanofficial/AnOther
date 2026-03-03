@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -6,40 +6,40 @@ import {
   faPinterest,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import td1 from "../../public/images/td1.jpg";
-import td2 from "../../public/images/td1.jpg";
-import td3 from "../../public/images/td3.jpg";
-import td4 from "../../public/images/td4.jpg";
-import td5 from "../../public/images/td5.jpg";
-import td6 from "../../public/images/td6.jpg";
-import td7 from "../../public/images/td7.jpg";
-import td8 from "../../public/images/td8.jpg";
-import td9 from "../../public/images/td9.jpg";
-import td10 from "../../public/images/td10.jpg";
-import td11 from "../../public/images/td11.jpg";
-import td12 from "../../public/images/td12.jpg";
-import td13 from "../../public/images/td13.jpg";
-import td14 from "../../public/images/td14.jpg";
-import td15 from "../../public/images/td15.jpg";
-import td16 from "../../public/images/td16.jpg";
-import td17 from "../../public/images/td17.jpg";
-import td18 from "../../public/images/td18.jpg";
-import td19 from "../../public/images/td19.jpg";
-import td20 from "../../public/images/td20.jpg";
-import td21 from "../../public/images/td21.jpg";
-import td22 from "../../public/images/td22.jpg";
-import td23 from "../../public/images/td23.jpg";
-import td24 from "../../public/images/td24.jpg";
-import td25 from "../../public/images/td25.jpg";
-import td26 from "../../public/images/td26.jpg";
-import td27 from "../../public/images/td27.jpg";
-import td28 from "../../public/images/td28.jpg";
-import td29 from "../../public/images/td29.jpg";
-import td30 from "../../public/images/td30.jpg";
-import td31 from "../../public/images/td31.jpg";
-import td32 from "../../public/images/td32.jpg";
-import td33 from "../../public/images/td33.jpg";
-import td34 from "../../public/images/td34.jpg";
+import td1 from "../../../public/images/td1.jpg";
+import td2 from "../../../public/images/td1.jpg";
+import td3 from "../../../public/images/td3.jpg";
+import td4 from "../../../public/images/td4.jpg";
+import td5 from "../../../public/images/td5.jpg";
+import td6 from "../../../public/images/td6.jpg";
+import td7 from "../../../public/images/td7.jpg";
+import td8 from "../../../public/images/td8.jpg";
+import td9 from "../../../public/images/td9.jpg";
+import td10 from "../../../public/images/td10.jpg";
+import td11 from "../../../public/images/td11.jpg";
+import td12 from "../../../public/images/td12.jpg";
+import td13 from "../../../public/images/td13.jpg";
+import td14 from "../../../public/images/td14.jpg";
+import td15 from "../../../public/images/td15.jpg";
+import td16 from "../../../public/images/td16.jpg";
+import td17 from "../../../public/images/td17.jpg";
+import td18 from "../../../public/images/td18.jpg";
+import td19 from "../../../public/images/td19.jpg";
+import td20 from "../../../public/images/td20.jpg";
+import td21 from "../../../public/images/td21.jpg";
+import td22 from "../../../public/images/td22.jpg";
+import td23 from "../../../public/images/td23.jpg";
+import td24 from "../../../public/images/td24.jpg";
+import td25 from "../../../public/images/td25.jpg";
+import td26 from "../../../public/images/td26.jpg";
+import td27 from "../../../public/images/td27.jpg";
+import td28 from "../../../public/images/td28.jpg";
+import td29 from "../../../public/images/td29.jpg";
+import td30 from "../../../public/images/td30.jpg";
+import td31 from "../../../public/images/td31.jpg";
+import td32 from "../../../public/images/td32.jpg";
+import td33 from "../../../public/images/td33.jpg";
+import td34 from "../../../public/images/td34.jpg";
 import { Link } from "react-router-dom";
 
 export default function FooterPage() {
@@ -102,7 +102,7 @@ export default function FooterPage() {
           className="flex justify-between items-center py-3 border-b border-zinc-800 cursor-pointer group"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="text-white group-hover:text-blue-400 transition-colors">
+          <span className="text-white group-hover:text-brand-blueSoft transition-colors">
             {item.title}
           </span>
           <FontAwesomeIcon
@@ -155,7 +155,7 @@ export default function FooterPage() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-white font-medium mb-1 group-hover:text-blue-400 transition-colors">
+                      <h4 className="text-white font-medium mb-1 group-hover:text-brand-blueSoft transition-colors">
                         {article.title}
                       </h4>
                       <p className="text-xs text-zinc-500">{article.date}</p>
@@ -220,14 +220,14 @@ export default function FooterPage() {
                 5 Art-Tastic Hotels Around the Globe
               </h2>
               <p className="text-sm text-zinc-400 font-medium mb-6">
-                Joanna Wellick • MAY 22, 2019 • NO COMMENTS
+                Joanna Wellick â€¢ MAY 22, 2019 â€¢ NO COMMENTS
               </p>
 
               <p className="text-zinc-300 mb-6 leading-relaxed text-sm">
                 Structured gripped tape invisible moulded cups for sauppor firm
                 hold strong powermesh front liner sport detail. Warmth comfort
                 hangs loosely from the body large pocket at the front full
-                button…
+                buttonâ€¦
               </p>
 
               <button className="px-6 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-medium mb-6 transition-colors duration-200">
@@ -237,19 +237,19 @@ export default function FooterPage() {
               <div className="flex items-center gap-6 text-zinc-500">
                 <span className="text-sm">SHARE</span>
                 <FontAwesomeIcon
-                  className="h-3 hover:text-blue-500 cursor-pointer transition-colors"
+                  className="h-3 hover:text-brand-blue cursor-pointer transition-colors"
                   icon={faArrowRight}
                 />
                 <FontAwesomeIcon
-                  className="h-4 hover:text-blue-600 cursor-pointer transition-colors"
+                  className="h-4 hover:text-brand-blueStrong cursor-pointer transition-colors"
                   icon={faFacebook}
                 />
                 <FontAwesomeIcon
-                  className="h-4 hover:text-blue-400 cursor-pointer transition-colors"
+                  className="h-4 hover:text-brand-blueSoft cursor-pointer transition-colors"
                   icon={faTwitter}
                 />
                 <FontAwesomeIcon
-                  className="h-4 hover:text-red-600 cursor-pointer transition-colors"
+                  className="h-4 hover:text-brand-dangerStrong cursor-pointer transition-colors"
                   icon={faPinterest}
                 />
               </div>
@@ -265,7 +265,7 @@ export default function FooterPage() {
                 <a
                   key={item}
                   href="#"
-                  className="text-white hover:text-blue-400 text-sm font-medium transition-colors"
+                  className="text-white hover:text-brand-blueSoft text-sm font-medium transition-colors"
                 >
                   {item}
                 </a>
@@ -280,3 +280,5 @@ export default function FooterPage() {
     </>
   );
 }
+
+

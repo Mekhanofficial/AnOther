@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+﻿import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare, faEye } from "@fortawesome/free-solid-svg-icons";
 import SocialShare from "./SocialShare";
 
@@ -39,3 +39,5 @@ const ArticleCard = ({
 );
 
 export default ArticleCard;
+
+

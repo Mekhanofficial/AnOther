@@ -1,10 +1,11 @@
-import StYle from "../../components/Style";
+﻿import StyleSection from "../../components/sections/Style";
 
 
 export default function StylePage() {
   return (
     <>
-      <StYle />
+      <StyleSection />
     </>
   );
 }
+

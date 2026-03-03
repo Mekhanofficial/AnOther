@@ -1,9 +1,10 @@
-import InteRior from "../../components/Interior";
+﻿import InteriorSection from "../../components/sections/Interior";
 
 export default function InteriorPage() {
   return (
     <>
-      <InteRior />
+      <InteriorSection />
     </>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -113,25 +113,25 @@ export default function HeaderPage() {
       icon: faFacebook,
       label: "53K Likes",
       url: "https://facebook.com",
-      color: "hover:text-blue-600",
+      color: "hover:text-brand-blueStrong",
     },
     {
       icon: faTwitter,
       label: "71K Followers",
       url: "https://twitter.com",
-      color: "hover:text-blue-400",
+      color: "hover:text-brand-blueSoft",
     },
     {
       icon: faInstagram,
       label: "50K Followers",
       url: "https://instagram.com",
-      color: "hover:text-pink-500",
+      color: "hover:text-brand-pink",
     },
     {
       icon: faPinterest,
       label: "32K Followers",
       url: "https://pinterest.com",
-      color: "hover:text-red-600",
+      color: "hover:text-brand-dangerStrong",
     },
   ];
 
@@ -184,7 +184,7 @@ export default function HeaderPage() {
       <div className="absolute left-0 top-0 h-full w-72 bg-zinc-900 p-6 overflow-y-auto transform transition-all duration-300 ease-in-out">
         <button
           onClick={toggleMobileMenu}
-          className="absolute top-6 right-6 text-white hover:text-purple-400 transition-colors"
+          className="absolute top-6 right-6 text-white hover:text-brand-violetSoft transition-colors"
         >
           <FontAwesomeIcon icon={faTimes} size="lg" />
         </button>
@@ -195,7 +195,7 @@ export default function HeaderPage() {
           </h1>
           <p className="text-zinc-300 mb-8">Culture, Music and Art Magazine</p>
 
-          <button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white w-full py-3 mb-8 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg">
+          <button className="bg-gradient-to-r from-brand-violet to-brand-blue hover:from-brand-violetStrong hover:to-brand-blueStrong text-white w-full py-3 mb-8 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg">
             Subscribe
           </button>
 
@@ -206,7 +206,7 @@ export default function HeaderPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search articles..."
-                className="w-full bg-zinc-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full bg-zinc-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet"
               />
               <button
                 type="submit"
@@ -226,7 +226,7 @@ export default function HeaderPage() {
                 <li key={item} className="border-b border-zinc-700 pb-2">
                   <Link
                     to="#"
-                    className="flex items-center justify-between text-white hover:text-purple-400 py-2 transition-colors"
+                    className="flex items-center justify-between text-white hover:text-brand-violetSoft py-2 transition-colors"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleDropdown(item);
@@ -270,7 +270,7 @@ export default function HeaderPage() {
                 <Link
                   to={`/${category.toLowerCase()}`}
                   key={category}
-                  className="rounded-full px-4 py-1.5 text-xs bg-zinc-700 hover:bg-purple-600 text-white transition-all hover:shadow-md"
+                  className="rounded-full px-4 py-1.5 text-xs bg-zinc-700 hover:bg-brand-violet text-white transition-all hover:shadow-md"
                   onClick={toggleMobileMenu}
                 >
                   {category}
@@ -288,7 +288,7 @@ export default function HeaderPage() {
                 <li key={item.label}>
                   <Link
                     to="#"
-                    className="flex items-center gap-3 text-white hover:text-purple-400 py-2 transition-colors"
+                    className="flex items-center gap-3 text-white hover:text-brand-violetSoft py-2 transition-colors"
                   >
                     <FontAwesomeIcon icon={item.icon} className="w-5" />
                     <span>{item.label}</span>
@@ -330,7 +330,7 @@ export default function HeaderPage() {
       <div className="h-full flex flex-col">
         <button
           onClick={toggleDesktopSidebar}
-          className="self-end text-white hover:text-purple-400 mb-10 transition-colors"
+          className="self-end text-white hover:text-brand-violetSoft mb-10 transition-colors"
         >
           <FontAwesomeIcon icon={faTimes} size="lg" />
         </button>
@@ -355,11 +355,11 @@ export default function HeaderPage() {
                     className="flex items-start gap-4"
                     onClick={closeSidebar}
                   >
-                    <div className="text-purple-500 group-hover:text-purple-400 mt-1 transition-colors">
+                    <div className="text-brand-violet group-hover:text-brand-violetSoft mt-1 transition-colors">
                       <FontAwesomeIcon icon={item.icon} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-white group-hover:text-purple-400 transition-colors">
+                      <h3 className="text-lg font-medium text-white group-hover:text-brand-violetSoft transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-sm text-zinc-400">
@@ -383,12 +383,12 @@ export default function HeaderPage() {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="bg-zinc-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-zinc-400"
+                className="bg-zinc-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet placeholder-zinc-400"
                 required
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-4 py-3 rounded-lg font-medium transition-all transform hover:scale-[1.02] shadow-md"
+                className="bg-gradient-to-r from-brand-violet to-brand-blue hover:from-brand-violetStrong hover:to-brand-blueStrong text-white px-4 py-3 rounded-lg font-medium transition-all transform hover:scale-[1.02] shadow-md"
               >
                 Subscribe to Newsletter
               </button>
@@ -431,7 +431,7 @@ export default function HeaderPage() {
       )}
 
       <header
-        className={`bg-zinc-950 text-white 22 top-0 z-20 transition-all duration-300 ${
+        className={`bg-zinc-950 text-white w-full top-0 z-20 transition-all duration-300 ${
           scrolled ? "shadow-xl py-2" : "py-4"
         }`}
       >
@@ -475,20 +475,20 @@ export default function HeaderPage() {
             <div className="flex items-center gap-4">
               <button
                 onClick={toggleMobileMenu}
-                className="md:hidden text-white hover:text-purple-400 transition-colors"
+                className="md:hidden text-white hover:text-brand-violetSoft transition-colors"
               >
                 <FontAwesomeIcon icon={faBars} size="lg" />
               </button>
 
               <button
                 onClick={toggleDesktopSidebar}
-                className="hidden lg:flex items-center gap-2 text-white hover:text-purple-400 transition-colors"
+                className="hidden lg:flex items-center gap-2 text-white hover:text-brand-violetSoft transition-colors"
               >
                 <FontAwesomeIcon icon={faBars} size="lg" />
                 <span className="text-sm font-medium">MENU</span>
               </button>
 
-              <button className="hidden md:block bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 shadow-md">
+              <button className="hidden md:block bg-gradient-to-r from-brand-violet to-brand-blue hover:from-brand-violetStrong hover:to-brand-blueStrong text-white px-5 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 shadow-md">
                 Subscribe
               </button>
             </div>
@@ -528,7 +528,7 @@ export default function HeaderPage() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search articles..."
-                        className="bg-zinc-700 text-white px-4 py-2 rounded-lg w-full pr-10 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="bg-zinc-700 text-white px-4 py-2 rounded-lg w-full pr-10 focus:outline-none focus:ring-2 focus:ring-brand-violet"
                         autoFocus
                       />
                       <button
@@ -543,7 +543,7 @@ export default function HeaderPage() {
                 ) : null}
                 <button
                   onClick={toggleSearch}
-                  className="text-white hover:text-purple-400 transition-colors"
+                  className="text-white hover:text-brand-violetSoft transition-colors"
                   aria-label="Search"
                 >
                   <FontAwesomeIcon
@@ -554,16 +554,16 @@ export default function HeaderPage() {
               </div>
 
               {/* Shopping Cart with badge */}
-              <button className="relative text-white hover:text-purple-400 transition-colors">
+              <button className="relative text-white hover:text-brand-violetSoft transition-colors">
                 <FontAwesomeIcon icon={faShoppingBag} size="lg" />
-                <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-brand-violet text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   3
                 </span>
               </button>
 
               {/* User Account */}
               <div className="hidden md:block relative group">
-                <button className="text-white hover:text-purple-400 transition-colors">
+                <button className="text-white hover:text-brand-violetSoft transition-colors">
                   <FontAwesomeIcon icon={faUser} size="lg" />
                 </button>
                 <div className="absolute right-0 mt-2 w-48 bg-zinc-800 rounded-lg shadow-xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -594,7 +594,7 @@ export default function HeaderPage() {
                 {navItems.map((item) => (
                   <div key={item} className="group relative">
                     <button
-                      className="flex items-center gap-1 text-white hover:text-purple-400 px-4 py-2 transition-colors font-medium"
+                      className="flex items-center gap-1 text-white hover:text-brand-violetSoft px-4 py-2 transition-colors font-medium"
                       onClick={() => toggleDropdown(item)}
                       onMouseEnter={() => toggleDropdown(item)}
                     >
@@ -635,7 +635,7 @@ export default function HeaderPage() {
               <div className="flex items-center gap-3">
                 <Link
                   to="/contact"
-                  className="text-sm text-white hover:text-purple-400 transition-colors flex items-center gap-1"
+                  className="text-sm text-white hover:text-brand-violetSoft transition-colors flex items-center gap-1"
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                   <span>Contact</span>
@@ -648,3 +648,4 @@ export default function HeaderPage() {
     </div>
   );
 }
+

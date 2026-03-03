@@ -1,4 +1,4 @@
-import SocialIcons from "./SocialIcons";
+﻿import SocialIcons from "./SocialIcons";
 
 const InstagramProfile = ({ profileImg, username, handle, stats, images }) => (
   <div className="text-center text-zinc-300 text-sm mt-20">
@@ -32,3 +32,5 @@ const InstagramProfile = ({ profileImg, username, handle, stats, images }) => (
 );
 
 export default InstagramProfile;
+
+

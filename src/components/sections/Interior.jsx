@@ -1,61 +1,37 @@
-import Slider from "react-slick";
-import TrendingPosts from "./TrendingPost";
-import ArticleCard from "./ArticleCard";
-import SocialShare from "./SocialShare";
-import InstagramGrid from "./InstagramGrid";
-import FeaturedImageCard from "./FeaturedImageCard";
-import InstagramProfile from "./InstagramProfile";
-import ProfileCard from "./ProfileCard";
-import SocialIcons from "./SocialIcons";
-import TrendingPostsSidebar from "./TrendingPostSidebar";
-import SliderCard from "./SliderCard";
-import td1 from "../../public/images/td1.jpg";
-import td2 from "../../public/images/td1.jpg";
-import td3 from "../../public/images/td3.jpg";
-import td4 from "../../public/images/td4.jpg";
-import td5 from "../../public/images/td5.jpg";
-import td6 from "../../public/images/td6.jpg";
-import td7 from "../../public/images/td7.jpg";
-import td8 from "../../public/images/td8.jpg";
-import td9 from "../../public/images/td9.jpg";
-import td10 from "../../public/images/td10.jpg";
-import td11 from "../../public/images/td11.jpg";
-import td12 from "../../public/images/td12.jpg";
-import td13 from "../../public/images/td13.jpg";
-import td14 from "../../public/images/td14.jpg";
-import td15 from "../../public/images/td15.jpg";
-import td16 from "../../public/images/td16.jpg";
-import td17 from "../../public/images/td17.jpg";
-import td18 from "../../public/images/td18.jpg";
-import td19 from "../../public/images/td19.jpg";
-import td20 from "../../public/images/td20.jpg";
-import td21 from "../../public/images/td21.jpg";
-import td22 from "../../public/images/td22.jpg";
-import td23 from "../../public/images/td23.jpg";
-import td24 from "../../public/images/td24.jpg";
-import td25 from "../../public/images/td25.jpg";
-import td26 from "../../public/images/td26.jpg";
-import td27 from "../../public/images/td27.jpg";
-import td28 from "../../public/images/td28.jpg";
-import td29 from "../../public/images/td29.jpg";
-import td30 from "../../public/images/td30.jpg";
-import td31 from "../../public/images/td31.jpg";
-import td32 from "../../public/images/td32.jpg";
-import td33 from "../../public/images/td33.jpg";
-import td34 from "../../public/images/td34.jpg";
-import td35 from "../../public/images/td35.png";
-import td36 from "../../public/images/td36.jpg";
-import td37 from "../../public/images/td37.jpg";
-import td38 from "../../public/images/td38.jpg";
-import td39 from "../../public/images/td39.jpg";
-import td40 from "../../public/images/td40.jpg";
-import td41 from "../../public/images/td41.jpg";
-import td42 from "../../public/images/td42.jpg";
-import td43 from "../../public/images/td43.jpg";
-import td44 from "../../public/images/td44.jpg";
-import ballerina from "../../public/images/ballerina.jpg";
+﻿import Slider from "react-slick";
+import TrendingPosts from "../shared/TrendingPost";
+import ArticleCard from "../shared/ArticleCard";
+import SocialShare from "../shared/SocialShare";
+import FeaturedImageCard from "../shared/FeaturedImageCard";
+import InstagramProfile from "../shared/InstagramProfile";
+import ProfileCard from "../shared/ProfileCard";
+import TrendingPostsSidebar from "../shared/TrendingPostSidebar";
+import SliderCard from "../shared/SliderCard";
+import td7 from "../../../public/images/td7.jpg";
+import td9 from "../../../public/images/td9.jpg";
+import td10 from "../../../public/images/td10.jpg";
+import td11 from "../../../public/images/td11.jpg";
+import td12 from "../../../public/images/td12.jpg";
+import td13 from "../../../public/images/td13.jpg";
+import td16 from "../../../public/images/td16.jpg";
+import td20 from "../../../public/images/td20.jpg";
+import td21 from "../../../public/images/td21.jpg";
+import td22 from "../../../public/images/td22.jpg";
+import td23 from "../../../public/images/td23.jpg";
+import td24 from "../../../public/images/td24.jpg";
+import td25 from "../../../public/images/td25.jpg";
+import td26 from "../../../public/images/td26.jpg";
+import td27 from "../../../public/images/td27.jpg";
+import td28 from "../../../public/images/td28.jpg";
+import td29 from "../../../public/images/td29.jpg";
+import td30 from "../../../public/images/td30.jpg";
+import td31 from "../../../public/images/td31.jpg";
+import td33 from "../../../public/images/td33.jpg";
+import td36 from "../../../public/images/td36.jpg";
+import td43 from "../../../public/images/td43.jpg";
 
-export default function StYle() {
+
+export default function InteriorSection() {
   const productsTwo = [
     {
       id: 1,
@@ -110,25 +86,24 @@ export default function StYle() {
   return (
     <>
       <div className="bg-zinc-950">
-        <div className="flex flex-col lg:flex-row mx-4 md:mx-10">
+        <div className="page-columns section-shell py-10 md:py-12">
           {/* Left Content Section */}
           <div className="flex-1">
             <div className="text-gray-300 text-center mt-10 lg:mt-20 mx-auto max-w-4xl">
-              <h2 className="text-5xl font-semibold my-4">Style</h2>
-              <p className="text-xs text-gray-700">10 POSTS</p>
+              <h2 className="text-5xl font-semibold my-4">Interior</h2>
+              <p className="text-xs text-gray-700">11 POSTS</p>
               <hr className="relative my-6 border-t-1 border-zinc-800" />
-              <h2 className="text-xs mb-5 font-bold">Style</h2>
+              <h2 className="text-xs mb-5 font-bold">INTERIOR</h2>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-                The Best Way to Introduce Students to 3-D Pens
+                Collector Favorites: Bestselling Artists of the Year
               </h1>
               <h5 className="text-xs mt-5 mb-10 font-bold">
-                May 22, 2019 . Elliot Alderson{" "}
-                <span className="text-gray-700">and</span> Joanna Wellick
+                May 23, 2019 . Joanna Wellick
               </h5>
 
               <img
                 className="w-full mx-auto h-64 md:h-96 object-cover"
-                src={td8}
+                src={td33}
                 alt="Ballerina"
               />
 
@@ -149,68 +124,11 @@ export default function StYle() {
               {/* Left Column Articles */}
               <div className="space-y-16 md:space-y-20">
                 <ArticleCard
-                  image={td14}
-                  category="STYLE"
-                  title="13 Cool Artists Turning Trash Into Treasure"
-                  author="May 21, 2019 . Joanna Wellick"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-
-                <ArticleCard
-                  image={td25}
-                  category="STYLE"
-                  title="5 Artworks That Celebrate Strong Women"
-                  author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-
-                <ArticleCard
-                  image={td3}
-                  category="STYLE"
-                  title="The 21st Century Art Movement — What Is It?"
-                  author="ELLIOT ALDERSON. MAY 21,2019"
-                  description="Structured gripped tape invisible moulded cups for suppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-
-                <ArticleCard
-                  image={td5}
-                  category="STYLE"
-                  title="8 of the Most Shocking Artworks Throughout History"
-                  author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-
-                <ArticleCard
-                  image={td6}
-                  category="STYLE"
-                  title="10 Interactive Street Art Works That Rocked"
-                  author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-
-                <ArticleCard
-                  image={td20}
-                  category="LIFESTYLE"
-                  title="Top 6 TV Shows and Films for Art Lovers"
-                  author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
-                  className="max-w-full"
-                />
-              </div>
-
-              {/* Right Column Articles */}
-              <div className="space-y-16 md:space-y-20 mt-10 lg:mt-0">
-                <ArticleCard
-                  image={td15}
-                  category="STYLE"
-                  title="Art and Wellbeing: The Healing Power of Art"
-                  author="ELLIOT ALDERSON. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  image={td12}
+                  category="INTERIOR"
+                  title="How to Start an Art Collection on Any Budget"
+                  author="ELLIOT ALDERSON AND JOANNA WELLICK . MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
                   className="max-w-full"
                 />
 
@@ -239,16 +157,64 @@ export default function StYle() {
                   ]}
                   className="max-w-full"
                 />
-
                 <ArticleCard
-                  image={td1}
+                  image={td9}
                   category="STYLE"
-                  title="6 Winning Artists Take On Modern Photography"
-                  author="ELLIOT ALDERSON. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  title="The 14 Best Art Museums in the World"
+                  author="ELLIOT ALDERSON. MAY 21,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
                   className="max-w-full"
                 />
 
+                <ArticleCard
+                  image={td26}
+                  category="LIFESTYLE"
+                  title="19 Contemporary Floral Designers in Bloom"
+                  author="Joanna Wellick. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
+                  className="max-w-full"
+                />
+
+                <FeaturedImageCard
+                  image={td36}
+                  category="LIFESTYLE"
+                  title="Spooky Sculptures of Ghosts Emerging From a Mirror"
+                  className="h-[400px] md:h-[600px] w-full"
+                />
+
+                <ArticleCard
+                  image={td20}
+                  category="LIFESTYLE"
+                  title="Top 6 TV Shows and Films for Art Lovers"
+                  author="Joanna Wellick. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
+                  className="max-w-full"
+                />
+              </div>
+
+              {/* Right Column Articles */}
+              <div className="space-y-16 md:space-y-20 mt-10 lg:mt-0">
+                <ArticleCard
+                  image={td13}
+                  category="TRAVEL"
+                  title="7 Cracking Christmas Outfits From Art History"
+                  author="ELLIOT ALDERSON. MAY 22,2019"
+                  className="max-w-full"
+                />
+                <FeaturedImageCard
+                  image={td20}
+                  category="LIFESTYLE"
+                  title="8 Art Market Terms New Collectors Need to Know"
+                  className="h-[400px] md:h-[600px] w-full"
+                />
+                <ArticleCard
+                  image={td7}
+                  category="INTERIOR"
+                  title="Has Shock Art Become an Obsolete Term?"
+                  author="ELLIOT ALDERSON. MAY 22,2019"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
+                  className="max-w-full"
+                />
                 <div className="flex justify-center">
                   <img
                     className="h-[200px] md:h-[250px] w-full max-w-[300px] object-cover"
@@ -258,28 +224,27 @@ export default function StYle() {
                 </div>
 
                 <ArticleCard
-                  image={td2}
-                  category="STYLE"
-                  title="How to Start an Art Collection on Any Budget"
+                  image={td12}
+                  category="INTERIOR"
+                  title="3 Lessons I Wish Iâ€™d Learned as a 21 Year Old Music Student"
                   author="ELLIOT ALDERSON. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
                   className="h-[500px] md:h-[600px] w-full"
                 />
-
                 <ArticleCard
-                  image={td18}
-                  category="STYLE"
-                  title="7 Cracking Christmas Outfits From Art History"
+                  image={td13}
+                  category="INTERIOR"
+                  title="8 Famous Artistsâ€™ Studios You Can Visit Today"
                   author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
                   className="max-w-full"
                 />
                 <ArticleCard
-                  image={td4}
+                  image={td43}
                   category="STYLE"
-                  title="10 Famous Female Painters Every Art Lover Should Know"
+                  title="8 Famous Artistsâ€™ Studios You Can Visit Today"
                   author="Joanna Wellick. MAY 22,2019"
-                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…"
+                  description="Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full buttonâ€¦"
                   className="max-w-full"
                 />
               </div>
@@ -287,7 +252,7 @@ export default function StYle() {
           </div>
 
           {/* Right Sidebar */}
-          <div className="w-full lg:w-[30%] mt-10 lg:mt-0 lg:ml-5 lg:pl-5 space-y-8">
+          <div className="w-full lg:w-[30%] mt-10 lg:mt-0 lg:ml-8 lg:pl-6 space-y-10">
             <div className="hidden lg:block">
               <Slider {...settingsTwo}>
                 {productsTwo.map((product) => (
@@ -366,7 +331,7 @@ export default function StYle() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
               <input
-                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow px-5 py-3 bg-zinc-950 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
                 type="email"
                 placeholder="Enter your email"
               />
@@ -394,7 +359,7 @@ export default function StYle() {
         </section>
 
         {/* Gallery Grid */}
-        <section className="">
+        <section className="mb-16">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
             {[td21, td22, td23, td24, td29, td30].map((imgSrc, index) => (
               <div key={index} className="aspect-square overflow-hidden group">
@@ -412,3 +377,5 @@ export default function StYle() {
     </>
   );
 }
+
+

@@ -1,9 +1,10 @@
-import LifeStyle from "../../components/Lifestyle";
+﻿import LifestyleSection from "../../components/sections/Lifestyle";
 
 export default function LifestylePage() {
   return (
     <>
-      <LifeStyle/>
+      <LifestyleSection />
     </>
   );
 }
+
