@@ -1,20 +1,20 @@
-﻿import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import HomePage from "../pages/Home";
 import LifestylePage from "../pages/Lifestyle";
 import StylePage from "../pages/Style";
 import TravelPage from "../pages/Travel";
 import InteriorPage from "../pages/Interior";
-import PageOne from "../components/subpages/Page1";
-import PageTwo from "../components/subpages/Page2";
-import PageThree from "../components/subpages/Page3";
-import PageFour from "../components/subpages/Page4";
-import PageFive from "../components/subpages/Page5";
-import PageSix from "../components/subpages/Page6";
-import PageSeven from "../components/subpages/Page7";
-import PageEight from "../components/subpages/Page8";
-import PageNine from "../components/subpages/Page9";
-import PageTen from "../components/subpages/Page10";
+import PageOne from "../components/Subpages/Page1";
+import PageTwo from "../components/Subpages/Page2";
+import PageThree from "../components/Subpages/Page3";
+import PageFour from "../components/Subpages/Page4";
+import PageFive from "../components/Subpages/Page5";
+import PageSix from "../components/Subpages/Page6";
+import PageSeven from "../components/Subpages/Page7";
+import PageEight from "../components/Subpages/Page8";
+import PageNine from "../components/Subpages/Page9";
+import PageTen from "../components/Subpages/Page10";
 
 const router = createBrowserRouter([
   {
@@ -85,5 +85,4 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
-
 
