@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -19,7 +19,7 @@ import {
   faTwitter,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function HeaderPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,22 +28,73 @@ export default function HeaderPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const headerRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const scrollTop = window.scrollY;
+      const maxScroll =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      setScrolled(scrollTop > 50);
+      setScrollProgress(
+        maxScroll > 0 ? Math.min((scrollTop / maxScroll) * 100, 100) : 0
+      );
     };
-    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsDesktopSidebarOpen(false);
+    setIsSearchOpen(false);
+    setSearchQuery("");
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+        setIsSearchOpen(false);
+        setSearchQuery("");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        setIsDesktopSidebarOpen(false);
+        setIsSearchOpen(false);
+        setSearchQuery("");
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
+
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    if (!isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   const toggleDesktopSidebar = () => {
@@ -55,10 +106,12 @@ export default function HeaderPage() {
   };
 
   const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen);
-    if (isSearchOpen) {
-      setSearchQuery("");
-    }
+    setIsSearchOpen((prev) => {
+      if (prev) {
+        setSearchQuery("");
+      }
+      return !prev;
+    });
   };
 
   const handleSearch = (e) => {
@@ -72,6 +125,10 @@ export default function HeaderPage() {
 
   const toggleDropdown = (dropdownName) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
+
+  const openDropdown = (dropdownName) => {
+    setActiveDropdown(dropdownName);
   };
 
   const closeAllDropdowns = () => {
@@ -431,7 +488,8 @@ export default function HeaderPage() {
       )}
 
       <header
-        className={`bg-zinc-950 text-white w-full top-0 z-20 transition-all duration-300 ${
+        ref={headerRef}
+        className={`sticky top-0 bg-zinc-950/95 backdrop-blur-md text-white w-full z-20 transition-all duration-300 ${
           scrolled ? "shadow-xl py-2" : "py-4"
         }`}
       >
@@ -592,11 +650,15 @@ export default function HeaderPage() {
             <div className="flex items-center justify-between py-3">
               <div className="flex items-center gap-1">
                 {navItems.map((item) => (
-                  <div key={item} className="group relative">
+                  <div
+                    key={item}
+                    className="group relative"
+                    onMouseLeave={closeAllDropdowns}
+                  >
                     <button
                       className="flex items-center gap-1 text-white hover:text-brand-violetSoft px-4 py-2 transition-colors font-medium"
                       onClick={() => toggleDropdown(item)}
-                      onMouseEnter={() => toggleDropdown(item)}
+                      onMouseEnter={() => openDropdown(item)}
                     >
                       {item}
                       <FontAwesomeIcon
@@ -611,7 +673,6 @@ export default function HeaderPage() {
                     {activeDropdown === item && (
                       <div
                         className="absolute left-0 mt-0 w-56 bg-zinc-800 rounded-b-lg shadow-xl z-50 animate-fadeIn"
-                        onMouseLeave={() => toggleDropdown(item)}
                       >
                         <ul className="py-2">
                           {dropdownContent[item].map((link) => (
@@ -643,6 +704,13 @@ export default function HeaderPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="h-0.5 w-full bg-zinc-800/60">
+          <div
+            className="h-full bg-gradient-to-r from-brand-violet to-brand-blue transition-[width] duration-200"
+            style={{ width: `${scrollProgress}%` }}
+          />
         </div>
       </header>
     </div>

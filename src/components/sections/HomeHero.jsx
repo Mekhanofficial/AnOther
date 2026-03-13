@@ -1,4 +1,4 @@
-﻿import td1 from "../../../public/images/td1.jpg";
+import td1 from "../../../public/images/td1.jpg";
 import td2 from "../../../public/images/td2.jpg";
 import td3 from "../../../public/images/td3.jpg";
 import td4 from "../../../public/images/td4.jpg";
@@ -576,10 +576,14 @@ export default function HomeHeroPage() {
                 />
               </Link>
 
-              <div className="sticky top-0 z-10">
-                <div className="w-full p-3">
+              <div className="sticky top-24 z-10">
+                <div className="w-full p-2">
                   <Link to={"/page9"} className="block w-full">
-                    <img className="w-full object-cover" src={td31} alt="Sticky content" />
+                    <img
+                      className="w-full max-h-[calc(100vh-7rem)] object-contain object-top"
+                      src={td31}
+                      alt="Sticky content"
+                    />
                   </Link>
                 </div>
               </div>
@@ -643,5 +647,4 @@ export default function HomeHeroPage() {
     </>
   );
 }
-
 
